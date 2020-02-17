@@ -1,8 +1,16 @@
 package co.com.sofka.hulk.store.commons.exception;
 
+/**
+ * @author micha3lvega
+ *
+ */
 public class NotFoundException extends Exception {
 
 	private static final long serialVersionUID = 1L;
+
+	public NotFoundException(Class<?> className) {
+		super(className.getName() + " not found");
+	}
 
 	public NotFoundException() {
 		super();
